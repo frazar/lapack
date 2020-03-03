@@ -37,8 +37,6 @@ script:
   - export INST_DIR=${SRC_DIR}/../lapack-travis-install
   - mkdir -p ${BLD_DIR}
   - cd ${BLD_DIR}
-# See issue #17 on github dashboard.  Once resolved, use -DCBLAS=ON
-#  - cmake -DCMAKE_INSTALL_PREFIX=${INST_DIR} -DLAPACKE=ON ${SRC_DIR}
   - cmake -DBUILDNAME:STRING="travis-${TRAVIS_OS_NAME}-${BRANCH}"
     -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
     -DCMAKE_INSTALL_PREFIX=${INST_DIR}
